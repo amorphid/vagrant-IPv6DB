@@ -6,12 +6,12 @@ require 'vagrant/IPv6DB/version'
 Gem::Specification.new do |spec|
   spec.name          = "vagrant-IPv6DB"
   spec.version       = Vagrant::IPv6DB::VERSION
-  spec.authors       = ["TODO: Write your name"]
+  spec.authors       = ["Michael Pope"]
   spec.email         = ["mpope.cr@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Vagrant plugin to create and persist IPv6 addresses"
+  spec.description   = spec.summary
+  spec.homepage      = "https://github.com/amorphid/vagrant-IPv6DB"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
