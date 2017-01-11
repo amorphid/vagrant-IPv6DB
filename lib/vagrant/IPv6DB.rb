@@ -1,3 +1,4 @@
+require "vagrant/IPv6DB/address_generator"
 require "vagrant/IPv6DB/version"
 
 module Vagrant
@@ -9,16 +10,20 @@ module Vagrant
 
       private
 
+      def addresses
+        @addresses ||= []
+      end
+
       def address_count
-        @address_count ||= 0
+        addresses.count
       end
 
       def create_address
-        @address_count += 1
+        addresses << Vagrant::IPv6DB::AddressGenerator.generate
       end
 
       def delete_addresses
-        @address_count = 0
+        @addresses = []
       end
     end
   end
